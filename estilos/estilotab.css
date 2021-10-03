@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    
+}
+header{
+    background-color: rgb(1, 59, 146);
+    color: #fff;
+    text-align:center;
+    border: 1px solid rgb(1, 59, 146);
+   
+}
+table{
+    border-collapse: collapse;
+  
+
+}
+td, th{
+    padding: 5px 10px;
+    border: 1px solid rgb(0, 0, 0);
+    
+}
+main{
+    padding: 2em 0em;
+}
+@media (max-width: 480px){
+    
+    table{
+        width: 100%;
+    }
+
+    table tr{
+ 
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgb(0, 0, 0);
+        padding: 1em;
+        margin-bottom: 1em;
+    
+
+    }
+
+    table td[data-titulo]{
+        display: flex;
+    }
+
+    table td[data-titulo]::before{
+        content: attr(data-titulo);
+        width: 90px;
+        color: rgb(19, 18, 18);
+        font-weight:bold;
+
+    }
+
+    table thead{
+        display: none;
+    }
+    td, th{
+       
+        border: none;
+        
+    }
+}
